@@ -70,6 +70,7 @@
             background: #246EE954;
         }
 
+
         .main {
             background: linear-gradient(180deg, #246ee9 0%, #78BAFF 100%);
             -webkit-text-fill-color: transparent;
@@ -81,6 +82,10 @@
             font-weight: 900;
         }
 
+        .arrowbtnm {
+            width: 102%;
+        }
+
         .line2 {
             height: 1px;
             background: #246ee9;
@@ -90,10 +95,29 @@
             background: #56a8ff;
             border-radius: 0px 0px 30px 30px;
             top: -35%;
+            animation: dropdown 0.2s ease-in-out;
+        }
+
+        .dropdown-menu[data-bs-popper].sidelogo .dropdown-item {
+            transition: all 0.2s ease-in-out;
+        }
+
+        @keyframes dropdown {
+            from {
+                height: 1px;
+            }
+
+            to {
+                height: 180px;
+            }
         }
 
         .dropdown-item:hover {
             text-decoration: underline;
+        }
+
+        .modal-dialog {
+            min-height: auto;
         }
 
         .content {
@@ -139,9 +163,19 @@
             font-size: 1.2rem;
         }
 
+        @media (min-width:420px) {
+            .carousel-inner {
+                margin-left: 13%;
+            }
+        }
+
         @media (max-width: 576px) {
             .applebtn small {
                 font-size: 10px;
+            }
+
+            .closebtn {
+                left: 88%;
             }
 
             .topbtn {
@@ -168,6 +202,10 @@
         @media (min-width: 576px) and (max-width: 992px) {
             .applebtn small {
                 font-size: 12px;
+            }
+
+            .closebtn {
+                left: 78%;
             }
 
             .line {
@@ -242,6 +280,9 @@
         }
 
         @media (min-width: 992px) {
+            .closebtn {
+                left: 69%;
+            }
 
             .top1 {
 
@@ -302,6 +343,10 @@
         }
 
         @media (min-width: 1200px) {
+            .closebtn {
+                left: 65%;
+            }
+
             .line2 {
                 width: 6%;
             }
@@ -403,14 +448,14 @@
                 <div class="d-flex flex-nowrap mt-5 mb-3 topbtn">
                     <button class="btn bg-black d-flex flex-nowrap applebtn justify-content-center rounded-5">
                         <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/apple-logo-svgrepo-com%201.png"
-                            width="35" height="35" class="m-0">
+                            width="35" height="35" class="m-0 pt-1 pb-1">
                         <p class="fs-4 fst-normal text-white m-0 lh-sm ms-4"> <small class="">Download on the
                             </small><br> App Store
                         </p>
                     </button>
                     <button class="btn bg-black d-flex flex-nowrap applebtn justify-content-center rounded-5 ms-5 ">
                         <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/logo-google-playstore-svgrepo-com%201.png"
-                            width="35" height="35" class="m-0">
+                            width="35" height="35" class="m-0 pt-1">
                         <p class="fs-4 fst-normal text-white m-0 lh-sm ms-4"> <small class="">Get the app on
                             </small><br> Google Play
                         </p>
@@ -620,48 +665,6 @@
     </div>
     <div class="container-fluid p-lg-5 mt-5 " id="contact" style="width: 97%;">
         <div class="row g-5 px-lg-4 ps-4">
-            <div class="col-lg-4 smallview">
-                <div class="d-none d-lg-block">
-                    <h2 class="fw-bold contact">Contact Us</h2>
-                    <div class="line1"></div>
-                    <p class="text infotext fst-normal lh-base mt-3">Use the contact form to send Us your message.</p>
-                </div>
-                <div class="mt-5 ps-lg-5 d-lg-block  d-md-flex justify-content-between text-center">
-                    <div class="d-md-flex mt-5  ">
-                        <button class="btn callbtn border-0">
-                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/call_black_24dp%201.png"
-                                width="25" height="25">
-                        </button>
-                        <p class="text text-center mt-2 mt-md-0 infotext fst-normal lh-base ms-4">+91 12345 67890</p>
-                    </div>
-                    <div class="d-md-flex mt-5  ">
-                        <button class="btn callbtn border-0">
-                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/email_black_24dp%201.png"
-                                width="25" height="25">
-                        </button>
-                        <p class="text text-center mt-2 mt-md-0 infotext fst-normal lh-base ms-4">reminder@gmail.com</p>
-                    </div>
-
-                    <div class="d-md-flex mt-5  ">
-                        <button class="btn callbtn border-0 ">
-                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/location_on_black_24dp%201.png"
-                                width="25" height="25">
-                        </button>
-                        <p class="d-md-block d-none text  mt-2 mt-md-0 infotext fst-normal lh-base ms-4 me-5">Akshya
-                            Nagar 1st Block
-                            1st
-                            Cross,<br>
-                            Rammurthy nagar,<br>
-                            Bangalore-560016</p>
-                        <p class=" d-md-none d-block text text-center mt-2 mt-md-0 fs-4 fst-normal lh-base ms-4 me-5">
-                            Akshya Nagar 1st
-                            Block 1st
-                            Cross,<br>
-                            Rammurthy nagar,<br>
-                            Bangalore-560016</p>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-8 ">
                 <div class="d-block d-lg-none">
                     <h2 class="fw-bold contact">Contact Us</h2>
@@ -717,6 +720,49 @@
                 </div>
 
             </div>
+            <div class="col-lg-4 ">
+                <div class="d-none d-lg-block">
+                    <h2 class="fw-bold contact">Contact Us</h2>
+                    <div class="line1"></div>
+                    <p class="text infotext fst-normal lh-base mt-3">Use the contact form to send Us your message.</p>
+                </div>
+                <div class="mt-5 ps-lg-5 d-lg-block  d-md-flex justify-content-between text-center">
+                    <div class="d-md-flex mt-5 pt-lg-5 ">
+                        <button class="btn callbtn border-0">
+                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/call_black_24dp%201.png"
+                                width="25" height="25">
+                        </button>
+                        <p class="text text-center mt-2 mt-md-0 infotext fst-normal lh-base ms-4">+91 12345 67890</p>
+                    </div>
+                    <div class="d-md-flex mt-5  ">
+                        <button class="btn callbtn border-0">
+                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/email_black_24dp%201.png"
+                                width="25" height="25">
+                        </button>
+                        <p class="text text-center mt-2 mt-md-0 infotext fst-normal lh-base ms-4">reminder@gmail.com</p>
+                    </div>
+
+                    <div class="d-md-flex mt-5  ">
+                        <button class="btn callbtn border-0 ">
+                            <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/location_on_black_24dp%201.png"
+                                width="25" height="25">
+                        </button>
+                        <p class="d-md-block d-none text  mt-2 mt-md-0 infotext fst-normal lh-base ms-4 me-5">Akshya
+                            Nagar 1st Block
+                            1st
+                            Cross,<br>
+                            Rammurthy nagar,<br>
+                            Bangalore-560016</p>
+                        <p class=" d-md-none d-block text text-center mt-2 mt-md-0 fs-4 fst-normal lh-base ms-4 me-5">
+                            Akshya Nagar 1st
+                            Block 1st
+                            Cross,<br>
+                            Rammurthy nagar,<br>
+                            Bangalore-560016</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -726,138 +772,141 @@
                 keyboard_double_arrow_up
             </span></button></a>
     <!-- Modal -->
-    <div class="modal fade" id="my1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+    <div class="modal fade  " id="my1" data-bs-backdrop="static">
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0  ">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
                 <div class=" modal-body p-0">
                     <div id="carouselExampleControlss" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class=" d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
-                                    width="97%" class="mt-4 d-block">
+                                    width="90%" class="mt-4 d-block">
                             </div>
-                        </div>
-
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#carouselExampleControlss" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#carouselExampleControlss" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="d-flex justify-content-center ">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
+                data-bs-target="#carouselExampleControlss" data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
+                data-bs-target="#carouselExampleControlss" data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
+
     </div>
+
     <div class="modal fade" id="my2" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0 ">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider2" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -865,75 +914,78 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider2" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider2" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider2"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider2"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my3" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider3" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -941,73 +993,76 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider3" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider3" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider3"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider3"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my4" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider4" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1015,73 +1070,76 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider4" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider4" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider4"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider4"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my5" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider5" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1089,74 +1147,77 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider5" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider5" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider5"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider5"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my6" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider6" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1164,74 +1225,77 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider6" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider6" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider6"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider6"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my7" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider7" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
 
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1239,74 +1303,77 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider7" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider7" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider7"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider7"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my8" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider8" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1314,73 +1381,76 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider8" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider8" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider8"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider8"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my9" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider9" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1388,73 +1458,75 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider9" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider9" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider9"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider9"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my10" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider10" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1462,73 +1534,75 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider10" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider10" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider10"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider10"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my11" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider11" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <div class=" carousel-item w-auto active">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Sent%20Successfully.png"
@@ -1536,71 +1610,73 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 75%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider11" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider11" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider11"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider11"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
+        </div>
     </div>
     <div class="modal fade" id="my12" data-bs-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered justify-content-center">
-            <div class="modal-content bg-transparent border-0 ms-5 ms-md-0 ps-5 ps-md-0 w-auto">
-                <button type="button" class=" border-0 bg-transparent d-flex  justify-content-end flex-nowrap "
-                    data-bs-dismiss="modal" aria-label="Close"><span class="material-symbols-rounded  text-white ">
-                        close
-                    </span></button>
+        <button type="button" class=" pt-4 border-0 bg-transparent position-relative closebtn" data-bs-dismiss="modal"
+            aria-label="Close"><span class="material-symbols-rounded  text-white ">
+                close
+            </span></button>
+        <div class="modal-dialog modal-dialog-centered justify-content-center mt-0  mb-0">
+            <div class="modal-content bg-transparent border-0 ms-2 ms-md-0 ps-4 ps-md-0 w-auto">
+
                 <div class=" modal-body p-0">
                     <div id="slider12" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
@@ -1610,66 +1686,67 @@
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Logo.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Create%20new%20account.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20Phone%20Number.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Enter%20OTP.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Verified.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invite.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Invitation.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Alarm.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Set%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                             <div class=" carousel-item w-auto ">
                                 <img src="https://raw.githubusercontent.com/MissRaunak/ALL-Image/main/Send%20Reminder.png"
-                                    width="75%" class="mt-4 d-block">
+                                    width="74%" class="mt-4 d-block">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center" style="width: 80%;">
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider12" data-bs-slide="prev">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_left
-                                </span>
-                            </button>
-                            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button"
-                                data-bs-target="#slider12" data-bs-slide="next">
-                                <span class="material-symbols-rounded arrow">
-                                    chevron_right
-                                </span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
+        </div>
+        <div class=" arrowbtnm d-flex justify-content-center">
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider12"
+                data-bs-slide="prev">
+                <span class="material-symbols-rounded arrow">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn border-0 opacity-100 p-0 m-0 text-white" type="button" data-bs-target="#slider12"
+                data-bs-slide="next">
+                <span class="material-symbols-rounded arrow">
+                    chevron_right
+                </span>
+            </button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
